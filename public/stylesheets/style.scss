@@ -1,0 +1,167 @@
+$backgroundColor: #202634;
+$secondaryColor: #283044;
+$accentColor: #5cd85a;
+$textColor: #f5f5f5;
+$textFont: 'Oswald', sans-serif;
+
+body {
+        background: $backgroundColor;
+        color: $textColor;
+        font-family: $textFont;
+    }
+img {
+    max-width: 100%;
+    height: auto;
+}
+.site-header {
+        background: $secondaryColor;
+        color: $textColor;
+        border-radius: 1rem;
+        padding: 1rem;
+        text-align: center;
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            color: $accentColor;
+            margin: 0 0 1rem;
+            grid-area: title;
+        }
+        .subtitle {
+            display: block;
+            font-size: .5em;
+            font-weight: normal;
+            color: $textColor;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    }
+.nav-bar {
+        @media (min-width: 53em) {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            grid-template-areas: "empty title login";
+            gap: 1.5rem;
+        }
+    }
+.login {
+    grid-area: login;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-around;
+    a {
+        text-decoration: none;
+        color: $accentColor;
+    } a:hover {
+        color: $textColor;
+    }
+    ul {
+        list-style: none;
+    }
+    button, button:focus {
+        outline: none;
+        border: none;
+        background: none;
+        font-size: 1em;
+        color: $accentColor;
+        cursor: pointer;
+        &:hover {
+            color: $textColor;
+        }
+        button:active {
+            outline: none;
+            background: none;
+        }
+    }
+}
+.submitBtn, .submitBtn:focus {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: $accentColor;
+    cursor: pointer;
+    &:hover {
+        color: $textColor;
+    }
+    button:active {
+        outline: none;
+        background: none;
+    }
+}
+.game-container {
+        background: $secondaryColor;
+        color: $textColor;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+        width: auto;
+        min-height: 20rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media (min-width: 45em) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .game-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: $accentColor;
+        }
+
+        .game-description {
+            font-size: 2rem;
+            font-weight: lighter;
+        }
+
+        .game-image {
+            align-self: center;
+            text-align: center;
+            flex-shrink: 0;
+            @media (min-width: 45em) {
+                width: MIN(30%, 25rem);
+            }
+        }
+    }
+.singlepost {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $accentColor;
+    }
+    h3 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: $accentColor;
+    }
+    p {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        color: $textColor;
+    }
+    a {
+        text-decoration: none;
+        color: $accentColor;
+    }
+}
+.comment-container {
+    text-align: center;
+}
+footer {
+        background: $secondaryColor;
+        font-weight: 200;
+        border-radius: 1rem;
+        color: $textColor;
+        padding: .5rem;
+        text-align: center;
+        .created-by {
+            color: $accentColor;
+        }
+    }

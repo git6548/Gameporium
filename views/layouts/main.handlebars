@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/gamePoriumIcon.svg">
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+    <title>Gameporium</title>
+</head>
+<body>
+    <main>
+        <header class="site-header">
+            <div class="nav-bar">
+                <a href="/"class="title">Gameporium🎮<span class="subtitle">User Game Review Website</span></a>
+                <div class="login">
+                    <ul>                         
+                        {{#if loggedIn}}                      
+                        <button id="logout">Logout</button>
+                        {{else}}
+                        <a class="login-signup" href="/login">Login/Signup</a> 
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section>
+            {{{body}}}
+        </section>
+        {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
+        <footer>
+            <span class="created-by">&copy; Created by: </br></span>
+            Stephanie Anderson </br>
+            Thisara Eranga </br>
+            Sadie Harty </br>
+            Guled Osman
+        </footer>
+    </main>
+</body>
+</html>

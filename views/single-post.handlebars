@@ -1,0 +1,47 @@
+<div>
+    <div class="game-container singlepost">
+        <h2 class="game-title">{{game.name}}</h2>
+        {{#if game.description}}
+        {{{game.description}}}
+        {{else}}
+        <p class="game-description">{{game.deck}}</p>
+        {{/if}}
+        <img src="{{game.image.medium_url}}" alt="Game image" />
+    </div>
+
+    <div id="post-section">
+        <h2>Comments and Ratings</h2>
+        {{#each dbCommentData as |comment|}}        
+            <div class="comment-container">        
+                <p> {{comment.comment_text}} </p>
+                <span>Rating: {{comment.rating}}/5</span>
+                {{!-- <p> {{post.rating}} </p> --}}
+            </div> 
+        {{/each}}          
+    </div>
+    {{#if loggedIn}}
+    <div class="comment-container">
+        <form class="comment-page">
+            <div>
+                <textarea name="comment-section"></textarea>
+            </div>
+            <div>
+                <button type="submit">Add Comment</button>
+                <div class="dropdown-menu-container">
+                    <label for="rating">Choose a rating:</label>
+
+                    <select name="rating" id='rating-id'>
+                        <option value="1">1 - Very Bad</option>
+                        <option value="2">2 - Bad</option>
+                        <option value="3">3 - Okay</option>
+                        <option value="4">4 - Good</option>
+                        <option value="5">5 - Very Good</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    {{/if}}
+</div>
+
+<script src="/javascript/comment.js"></script>

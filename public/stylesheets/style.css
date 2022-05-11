@@ -1,0 +1,229 @@
+body {
+  background: #202634;
+  color: #f5f5f5;
+  font-family: "Oswald", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-header {
+  background: #283044;
+  color: #f5f5f5;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.site-header .title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #5cd85a;
+  margin: 0 0 1rem;
+  grid-area: title;
+}
+
+.site-header .subtitle {
+  display: block;
+  font-size: .5em;
+  font-weight: normal;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 53em) {
+  .nav-bar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr auto 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-areas: "empty title login";
+    gap: 1.5rem;
+  }
+}
+
+.login {
+  grid-area: login;
+  font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: block;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.login a {
+  text-decoration: none;
+  color: #5cd85a;
+}
+
+.login a:hover {
+  color: #f5f5f5;
+}
+
+.login ul {
+  list-style: none;
+}
+
+.login button, .login button:focus {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1em;
+  color: #5cd85a;
+  cursor: pointer;
+}
+
+.login button:hover, .login button:focus:hover {
+  color: #f5f5f5;
+}
+
+.login button button:active, .login button:focus button:active {
+  outline: none;
+  background: none;
+}
+
+.login-container {
+  display: block;
+}
+
+.login-container label{  
+  display: block;
+}
+
+
+.submitBtn, .submitBtn:focus {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1em;
+  color: #5cd85a;
+  cursor: pointer;
+}
+
+.submitBtn:hover, .submitBtn:focus:hover {
+  color: #f5f5f5;
+}
+
+.submitBtn button:active, .submitBtn:focus button:active {
+  outline: none;
+  background: none;
+}
+
+.game-container {
+  background: #283044;
+  color: #f5f5f5;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: auto;
+  min-height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 45em) {
+  .game-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.game-container .game-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #5cd85a;
+}
+
+.game-container .game-description {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.game-container .game-image {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+@media (min-width: 45em) {
+  .game-container .game-image {
+    width: MIN(30%, 25rem);
+  }
+}
+
+.singlepost {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: auto;
+}
+
+.singlepost h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5cd85a;
+}
+
+.singlepost h3 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #5cd85a;
+}
+
+.singlepost p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.singlepost a {
+  text-decoration: none;
+  color: #5cd85a;
+}
+
+.comment-container {
+  text-align: center;
+}
+
+footer {
+  background: #283044;
+  font-weight: 200;
+  border-radius: 1rem;
+  color: #f5f5f5;
+  padding: .5rem;
+  text-align: center;
+}
+
+footer .created-by {
+  color: #5cd85a;
+}
+/*# sourceMappingURL=style.css.map */
